@@ -1,0 +1,223 @@
+<html>
+
+<head>
+
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .box {
+            margin: 20px 0;
+            padding: 15px;
+            border: 2px solid #333;
+        }
+
+        .box1 {
+            background-color: #4dabf7;
+            padding: 20px;
+        }
+
+        .box2 {
+            background-color: #ffa94d;
+            margin: 40px;
+        }
+
+        .box3 {
+            background-color: #51cf66;
+            padding: 30px;
+        }
+
+        .box4 {
+            background-color: #ff6b6b;
+            margin: 30px;
+        }
+
+        .collapsed-box1 {
+            margin-bottom: 50px;
+            background-color: #4dabf7;
+            padding: 15px;
+        }
+
+        .collapsed-box2 {
+            margin-top: 30px;
+            background-color: #ffa94d;
+            padding: 15px;
+        }
+
+        .flexbox {
+            display: flex;
+            background-color: #ccc;
+            padding: 10px;
+            margin: 20px 0;
+        }
+
+        .flex-item {
+            background-color: #4dabf7;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .button {
+            background-color: #4dabf7;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+        }
+
+        .question {
+            background-color: #e3f2fd;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #1971c2;
+        }
+
+        .answer {
+            background-color: #f8f9fa;
+            padding: 10px;
+            margin: 5px 0 20px 0;
+            border: 1px solid #ddd;
+        }
+
+        h1 {
+            color: #1971c2;
+            margin-top: 30px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #1971c2;
+        }
+
+        h2 {
+            color: #2b8a3e;
+            margin: 15px 0 5px 0;
+        }
+
+        h3 {
+            color: #5c940d;
+            margin: 10px 0 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <title>CSS Spacing Complete Guide</title>
+
+    <h1>SECTION A: FOUNDATIONS</h1>
+
+    <h2>Task 1: Padding</h2>
+    <div class="box box1">Box with padding</div>
+    <h3>Does padding increase element size?</h3>
+    <div class="answer">Yes</div>
+    <h3>Does padding affect nearby elements?</h3>
+    <div class="answer">No</div>
+
+    <h2>Task 2: Margin</h2>
+    <div class="box box2">Box with margin</div>
+    <h3>Does margin increase element size?</h3>
+    <div class="answer">No</div>
+    <h3>Does margin belong to the element?</h3>
+    <div class="answer">No</div>
+
+    <h2>Task 3: Padding vs Margin</h2>
+    <div class="box box3">Padding: Background fills space</div>
+    <div class="box box4">Margin: Background doesn't fill space</div>
+    <h3>Which space is colored?</h3>
+    <div class="answer">Padding space</div>
+
+    <h1>SECTION B: LAYOUT INTERACTION</h1>
+
+    <h2>Task 6: Margin Collapse</h2>
+    <div class="collapsed-box1">Box 1: margin-bottom 50px</div>
+    <div class="collapsed-box2">Box 2: margin-top 30px</div>
+    <h3>Space between boxes?</h3>
+    <div class="answer">50px (not 80px)</div>
+
+    <h1>SECTION C: FLEXBOX</h1>
+
+    <h2>Task 8: Without Flexbox</h2>
+    <div>
+        <div class="box" style="background-color:#4dabf7">Box 1</div>
+        <div class="box" style="background-color:#ffa94d">Box 2</div>
+        <div class="box" style="background-color:#51cf66">Box 3</div>
+    </div>
+
+    <h2>Task 8: With Flexbox</h2>
+    <div class="flexbox">
+        <div class="flex-item">Box 1</div>
+        <div class="flex-item">Box 2</div>
+        <div class="flex-item">Box 3</div>
+    </div>
+    <h3>Flexbox changes:</h3>
+    <div class="answer">1. Row layout<br>2. Equal height<br>3. Flexible width</div>
+
+    <h1>SECTION D: ALIGNMENT</h1>
+
+    <h2>Task 12: Space Between</h2>
+    <div class="flexbox" style="justify-content: space-between;">
+        <div class="flex-item">Left</div>
+        <div class="flex-item">Center</div>
+        <div class="flex-item">Right</div>
+    </div>
+
+    <h2>Task 14: Auto Margin</h2>
+    <div class="flexbox">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item" style="margin-left: auto;">Auto Margin</div>
+    </div>
+
+    <h1>SECTION E: DESIGN</h1>
+
+    <h2>Task 15: Button</h2>
+    <button class="button">Click Me</button>
+    <h3>What increases click area?</h3>
+    <div class="answer">Padding</div>
+
+    <h2>Task 16: Card</h2>
+    <div class="card">
+        <h3>Card Title</h3>
+        <p>This is a card component.</p>
+        <button class="button">Action</button>
+    </div>
+    <h3>Card spacing rule:</h3>
+    <div class="answer">Padding inside, margin outside</div>
+
+    <h1>SECTION F: ADVANCED</h1>
+
+    <h2>Task 18: Box-sizing</h2>
+    <div class="flexbox" style="width:400px;border:2px solid red;">
+        <div style="width:100px;padding:40px;background:#4dabf7;">No box-sizing</div>
+        <div style="width:100px;padding:40px;background:#51cf66;box-sizing:border-box;">With box-sizing</div>
+    </div>
+    <h3>What does box-sizing do?</h3>
+    <div class="answer">Includes padding in width calculation</div>
+
+    <h2>Task 19: Centering</h2>
+    <div
+        style="height:100px;border:2px solid #333;display:flex;align-items:center;justify-content:center;margin:20px 0;">
+        <div style="background:#4dabf7;padding:10px;">Centered with Flexbox</div>
+    </div>
+    <h3>Why use flexbox for centering?</h3>
+    <div class="answer">Easy and reliable</div>
+
+    <h2>Task 20: Rules</h2>
+    <h3>Padding never for:</h3>
+    <div class="answer">Space between elements</div>
+    <h3>Margin never for:</h3>
+    <div class="answer">Internal spacing</div>
+    <h3>Use flexbox when:</h3>
+    <div class="answer">Need alignment or complex layouts</div>
+
+</body>
+
+</html>
